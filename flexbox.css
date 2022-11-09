@@ -1,6 +1,6 @@
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .father {
@@ -44,4 +44,15 @@ body {
 
 3) align-content (line을 변경, line은 cross-axis에 있는 상태)
 - justify-content와 비슷하지만 'line'에 관한 것 (각 block이 여러 행에 걸쳐 나올 때, 행간 공백을 얼마나 둘 건지?)
-- align-content: flex-start; - align-content: space-around; */
+- align-content: flex-start; - align-content: space-around; 
+
+4) flex-grow, flex-shirnk : child에게 주는 속성 (반응형 디자인에 유용)
+- 준 값 만큼 비율에 맞춰 nowrap일시 전체 크기가 줄어질수록 증가/감소 함
+
+5) flex-basis (===width): child 에게
+- element에게 처음 크기를 주는것(찌그러지거나 늘어나기 전)
+-shrink, grow에 영향 받음
+-main axix에 작용
+
+6)flex-flow : flex-direction + flex-wrap 합체한거
+*/
