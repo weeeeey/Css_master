@@ -2,30 +2,32 @@
     display: grid;
     height: 50vh;
     gap: 10px;
-    grid-template:
-        "header header header header" 1fr
-        "content content content nav" 2fr
-        "footer footer footer footer" 1fr / 1fr 1fr 1fr 3fr;
-    /* 각 row 지정 row크기 지정 / 각 column 크기 지정 (repeat사용 못함)
-        fr은 fraction의 약자로 구역을 뜻함
-        전체 구역을 분할해서 크기 맞춰줌
-     */
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    place-items: stretch center;
+    /* align-items: stretch;
+    justify-items: center; */
+    /* 
+    ● align-items 수직
+    ● justify-items 수평
+● place-items: (수직) (수평);
+
+▷ stretch : grid를 늘려서 grid를 채우게 한다.
+▷ start : item을 cell 시작에 배치한다.
+▷ center : item을 cell 중앙에 배치한다.
+▷ end : item을 cell 끝에 배치한다. */
 }
 .header {
     background-color: antiquewhite;
-    grid-area: header;
 }
 .content {
     background-color: aqua;
-    grid-area: content;
 }
 .nav {
     background-color: black;
-    grid-area: nav;
 }
 .footer {
     background-color: blue;
-    grid-area: footer;
 }
 
 /* 
@@ -35,6 +37,15 @@ width는 가능한 한 최댓값, height은 0이다.
 => fr을 쓰려면 grid container에 height만 써도 동작하지만, 
 width만 쓰면 동작하지 않는 이유가 이것이다.
 
+
+● justify-items
+● align-items
+● place-items: (수직) (수평);
+
+▷ stretch : grid를 늘려서 grid를 채우게 한다.
+▷ start : item을 cell 시작에 배치한다.
+▷ center : item을 cell 중앙에 배치한다.
+▷ end : item을 cell 끝에 배치한다.
  */
 
 /* 
