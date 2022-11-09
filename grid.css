@@ -7,26 +7,30 @@
 .header {
     background-color: antiquewhite;
     /* 여기에 쓰는 숫자는 element 기준이 아닌 grid에 의해 나뉘어지는
-    격자 기준으로 작성 */
-    grid-column-start: 1;
-    grid-column-end: 5;
+    격자 기준으로 작성 ( 라인 수를 기억해야하는 단점*/
+    /* grid-column-start: 1;
+    grid-column-end: 5; */
+    grid-column: span 4;
 }
 .content {
     background-color: aqua;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 4;
+    /* grid-column-start: 1;
+    grid-column-end: 4; */
+    grid-column: 1/-2;
+    grid-row: span 2;
 }
 .nav {
     background-color: black;
-    grid-row-start: 2;
-    grid-row-end: 4;
+    /* grid-row-start: 2;
+    grid-row-end: 4; */
+    grid-row: span 3;
 }
 .footer {
     background-color: blue;
-    grid-column-start: 1;
-    grid-column-end: 5;
+    /* grid-column-start: 1;
+    grid-column-end: 5; */
+    /* grid-column: 1/5; */
+    grid-column: span 3;
 }
 
 /* 
@@ -44,7 +48,7 @@ grid 도 부모에서 일어남(flex와 규칙 비슷함)
 - [0 ] grid-row-gap
 - [0 ] grid-gap
 - [0 ] grid-template-areas
-- [ ] grid-template
+- [0 ] grid-template
 - [ ] justify-items
 - [ ] align-items
 - [ ] justify-content
