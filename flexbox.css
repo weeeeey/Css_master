@@ -1,0 +1,16 @@
+/* flex는 자식들과 소통 x */
+/* 자식들과 소통하고 싶으면 컨테이너(여기서는 wrapper)를 만들어야함 */
+
+.wrapper {
+    height: 100vh;
+    display: flex; /* flex-direction 기본 row */
+    /* flex-direction: column; */
+    justify-content: space-between; /* main axis 정렬 */
+    align-items: center; /* cross axis 정렬 */
+}
+.box {
+    width: 200px;
+    height: 200px;
+    background: peru;
+    color: white;
+}
