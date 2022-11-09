@@ -1,41 +1,39 @@
 .grid {
     display: grid;
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows: repeat(4, 100px);
+    height: 50vh;
     gap: 10px;
+    grid-template:
+        "header header header header" 1fr
+        "content content content nav" 2fr
+        "footer footer footer footer" 1fr / 1fr 1fr 1fr 3fr;
+    /* 각 row 지정 row크기 지정 / 각 column 크기 지정 (repeat사용 못함)
+        fr은 fraction의 약자로 구역을 뜻함
+        전체 구역을 분할해서 크기 맞춰줌
+     */
 }
 .header {
     background-color: antiquewhite;
-    /* 여기에 쓰는 숫자는 element 기준이 아닌 grid에 의해 나뉘어지는
-    격자 기준으로 작성 ( 라인 수를 기억해야하는 단점*/
-    /* grid-column-start: 1;
-    grid-column-end: 5; */
-    grid-column: span 4;
+    grid-area: header;
 }
 .content {
     background-color: aqua;
-    /* grid-column-start: 1;
-    grid-column-end: 4; */
-    grid-column: 1/-2;
-    grid-row: span 2;
+    grid-area: content;
 }
 .nav {
     background-color: black;
-    /* grid-row-start: 2;
-    grid-row-end: 4; */
-    grid-row: span 3;
+    grid-area: nav;
 }
 .footer {
     background-color: blue;
-    /* grid-column-start: 1;
-    grid-column-end: 5; */
-    /* grid-column: 1/5; */
-    grid-column: span 3;
+    grid-area: footer;
 }
 
 /* 
 grid 도 부모에서 일어남(flex와 규칙 비슷함)
-
+항상 block은 width와 height 주어져 있지 않은 경우에는 
+width는 가능한 한 최댓값, height은 0이다.
+=> fr을 쓰려면 grid container에 height만 써도 동작하지만, 
+width만 쓰면 동작하지 않는 이유가 이것이다.
 
  */
 
@@ -49,18 +47,18 @@ grid 도 부모에서 일어남(flex와 규칙 비슷함)
 - [0 ] grid-gap
 - [0 ] grid-template-areas
 - [0 ] grid-template
+- [0 ] grid-auto-columns
+- [0 ] grid-auto-rows
+- [0 ] grid-auto-flow
+- [0 ] grid-column-start
+- [0 ] grid-column-end
+- [0 ] grid-row-start
+- [0 ] grid-row-end
+- [0 ] grid-column
+- [0 ] grid-row
 - [ ] justify-items
 - [ ] align-items
 - [ ] justify-content
 - [ ] align-content
-- [ ] grid-auto-columns
-- [ ] grid-auto-rows
-- [ ] grid-auto-flow
-- [ ] grid-column-start
-- [ ] grid-column-end
-- [ ] grid-row-start
-- [ ] grid-row-end
-- [ ] grid-column
-- [ ] grid-row
 - [ ] justify-self
 - [ ] align-self */
