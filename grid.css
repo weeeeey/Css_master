@@ -19,6 +19,23 @@
 .grid:last-child {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
+
+/* 
+auto-fit, auto-fill은 전부 repeat() 함수 안에서만 동작한다.
+이 둘을 이용하면 responsive website(반응형 웹사이트)를 손쉽게 만들 수 있다. (최고의방법)
+즉, 대부분의 경우 repeat()의 첫번째 인자로 직접 숫자를 쓰는 것보다 auto-fill, auto-fit
+둘 중 하나를 쓰는 경우가 다반사일 것이다
+
+[auto-flll]
+우리가 정해준 크기 안에서 가능한 한 많은 빈 column(row)를 만들어준다.
+(남는 공간을 빈 cell로 가득 채움)
+[auto-fit]
+현재 element를 stretch해서 colum(row) 딱 맞게(fit) 해준다.
+(남는 공간에 현재 요소를 stretch해서 가득 채움)
+*참고로 CSS를 연습할 때는 firefox 브라우저가 가장 좋고, Live Server는 가끔 CSS가 먹통이 될 수 있으니 CSS 연습할 때만은 사용을 지양하는 것이 좋은 것 같다
+
+ */
+
 /* 
 grid 도 부모에서 일어남(flex와 규칙 비슷함)
 항상 block은 width와 height 주어져 있지 않은 경우에는 
