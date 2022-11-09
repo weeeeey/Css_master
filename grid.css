@@ -1,20 +1,29 @@
-.father {
+.grid {
     display: grid;
-    grid-template-columns: 250px 250px 250px;
-    /* 지정해주지 않은거에 대해서는 자식 크기에 따라 크기 지정됨 */
-    grid-template-rows: 100px 50px 300px;
-    /* row-gap: 10px;
-    column-gap: 10px; */
+    grid-template-columns: auto 200px;
+    grid-template-rows: 50px repeat(2, 100px) 50px;
     gap: 10px;
+    grid-template-areas:
+        "header header header header"
+        "content content . nav"
+        "content content . nav"
+        "footer footer footer footer";
 }
-.child {
-    flex-basis: 30%;
-    background: peru;
-    color: wheat;
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.header {
+    background-color: antiquewhite;
+    grid-area: header;
+}
+.content {
+    background-color: aqua;
+    grid-area: content;
+}
+.nav {
+    background-color: black;
+    grid-area: nav;
+}
+.footer {
+    background-color: blue;
+    grid-area: footer;
 }
 
 /* 
