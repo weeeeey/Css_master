@@ -1,0 +1,50 @@
+.father {
+    display: grid;
+    grid-template-columns: 250px 250px 250px;
+    /* 지정해주지 않은거에 대해서는 자식 크기에 따라 크기 지정됨 */
+    grid-template-rows: 100px 50px 300px;
+    /* row-gap: 10px;
+    column-gap: 10px; */
+    gap: 10px;
+}
+.child {
+    flex-basis: 30%;
+    background: peru;
+    color: wheat;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 
+grid 도 부모에서 일어남(flex와 규칙 비슷함)
+
+
+ */
+
+/* 
+## Grid:
+
+- [0 ] grid-template-columns
+- [0 ] grid-template-rows
+- [0 ] grid-column-gap>
+- [0 ] grid-row-gap
+- [0 ] grid-gap
+- [ ] grid-template-areas
+- [ ] grid-template
+- [ ] justify-items
+- [ ] align-items
+- [ ] justify-content
+- [ ] align-content
+- [ ] grid-auto-columns
+- [ ] grid-auto-rows
+- [ ] grid-auto-flow
+- [ ] grid-column-start
+- [ ] grid-column-end
+- [ ] grid-row-start
+- [ ] grid-row-end
+- [ ] grid-column
+- [ ] grid-row
+- [ ] justify-self
+- [ ] align-self */
